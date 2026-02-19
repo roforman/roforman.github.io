@@ -1,0 +1,55 @@
+/* =====================
+  SECTION PAGE
+===================== */
+.page-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 40px 80px;
+}
+
+.page-hero {
+  margin-bottom: 40px;
+}
+
+.page-hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(32px, 5vw, 56px);
+  color: var(--color-text-primary);
+}
+
+.page-hero p {
+  margin: 0;
+  font-size: clamp(16px, 2.2vw, 20px);
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+.page-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-elevated);
+  padding: 28px;
+}
+
+.page-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+.page-card p {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .page-main {
+    padding: 110px 20px 48px;
+  }
+
+  .page-card {
+    padding: 20px;
+  }
+}

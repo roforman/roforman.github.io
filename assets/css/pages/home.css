@@ -1,0 +1,85 @@
+/* =====================
+  CTA SOCKET SECTION
+===================== */
+.cta-socket {
+  position: relative;
+  height: 1080px;
+  background-image: url("../../images/fac_snu_02.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.cta-content {
+  position: relative; /* overlay */
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 40px;
+  max-width: 2440px;
+  margin: 0 auto;
+  color: var(--color-white);
+}
+
+.cta-content h1 {
+  font-size: clamp(32px, 5vw, 70px);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.6;
+  color: var(--color-text-on-dark-muted);
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--color-overlay-strong);
+}
+
+.cta-bar {
+  position: absolute;
+  right: 220px;
+  bottom: 100px;
+  transform: translateX(-50%);
+  z-index: 3;
+  background: var(--color-black);
+  border-radius: var(--radius-pill);
+  display: flex;
+  gap: 60px;
+  padding: 20px 70px;
+}
+
+.cta-bar a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0.85;
+  transition: opacity var(--transition-fast);
+}
+
+.cta-bar a:hover {
+  opacity: 1;
+}
+
+.image-section {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .cta-socket {
+    height: 360px;
+  }
+
+  .cta-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 32px;
+  }
+}
