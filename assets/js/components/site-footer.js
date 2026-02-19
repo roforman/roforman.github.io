@@ -3,11 +3,12 @@ class SiteFooter extends HTMLElement {
 
   static async loadStyleText() {
     if (!SiteFooter.styleTextPromise) {
-      SiteFooter.styleTextPromise = fetch("/assets/css/components/site-footer.css")
-        .then((res) => {
-          if (!res.ok) throw new Error("Failed to load site-footer.css");
-          return res.text();
-        });
+      SiteFooter.styleTextPromise = fetch(
+        "/assets/css/components/site-footer.css",
+      ).then((res) => {
+        if (!res.ok) throw new Error("Failed to load site-footer.css");
+        return res.text();
+      });
     }
     return SiteFooter.styleTextPromise;
   }
