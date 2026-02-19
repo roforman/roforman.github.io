@@ -27,8 +27,12 @@ class SiteHeader extends HTMLElement {
               <img src="/assets/images/roforman_logo.png" alt="Company logo" />
             </a>
           </div>
-          <button class="menu-toggle" aria-label="Open menu">Menu</button>
-          <nav class="nav-menu">
+          <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+          </button>
+          <nav id="site-nav" class="nav-menu">
             <a href="/company/">Company</a>
             <a href="/product/">Products</a>
             <a href="/technology/">Technology</a>
@@ -43,7 +47,8 @@ class SiteHeader extends HTMLElement {
     const menu = this.shadowRoot.querySelector(".nav-menu");
     if (toggle && menu) {
       toggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
+        const isActive = menu.classList.toggle("active");
+        toggle.setAttribute("aria-expanded", String(isActive));
       });
     }
   }
