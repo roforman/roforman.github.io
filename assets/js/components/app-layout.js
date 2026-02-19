@@ -1,5 +1,18 @@
 class AppLayout extends HTMLElement {
-  connectedCallback() {
+  static modulesLoaded = false;
+
+  static async ensureModules() {
+    if (AppLayout.modulesLoaded) return;
+    await Promise.all([
+      import("/assets/js/components/site-header.js"),
+      import("/assets/js/components/site-footer.js"),
+    ]);
+    AppLayout.modulesLoaded = true;
+  }
+
+  async connectedCallback() {
+    await AppLayout.ensureModules();
+
     if (!this.querySelector("site-header")) {
       const header = document.createElement("site-header");
       this.prepend(header);
