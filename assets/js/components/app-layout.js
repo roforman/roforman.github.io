@@ -1,5 +1,6 @@
 class AppLayout extends HTMLElement {
   static modulesLoaded = false;
+  static styleTextPromise;
 
   static async ensureModules() {
     if (AppLayout.modulesLoaded) return;
@@ -10,17 +11,31 @@ class AppLayout extends HTMLElement {
     AppLayout.modulesLoaded = true;
   }
 
-  async connectedCallback() {
-    await AppLayout.ensureModules();
-
-    if (!this.querySelector("site-header")) {
-      const header = document.createElement("site-header");
-      this.prepend(header);
+  static async loadStyleText() {
+    if (!AppLayout.styleTextPromise) {
+      AppLayout.styleTextPromise = fetch("/assets/css/components/app-layout.css")
+        .then((res) => {
+          if (!res.ok) throw new Error("Failed to load app-layout.css");
+          return res.text();
+        });
     }
+    return AppLayout.styleTextPromise;
+  }
 
-    if (!this.querySelector("site-footer")) {
-      const footer = document.createElement("site-footer");
-      this.append(footer);
+  async connectedCallback() {
+    const [styleText] = await Promise.all([
+      AppLayout.loadStyleText(),
+      AppLayout.ensureModules(),
+    ]);
+
+    if (!this.shadowRoot) {
+      this.attachShadow({ mode: "open" });
+      this.shadowRoot.innerHTML = `
+        <style>${styleText}</style>
+        <site-header></site-header>
+        <main class="layout-content"><slot></slot></main>
+        <site-footer></site-footer>
+      `;
     }
   }
 }
