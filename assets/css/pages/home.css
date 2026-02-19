@@ -1,85 +1,87 @@
 /* =====================
-  CTA SOCKET SECTION
+  HERO SECTION
 ===================== */
-.cta-socket {
-  position: relative;
-  height: 1080px;
-  background-image: url("../../images/fac_snu_02.jpg");
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: calc(100dvh - var(--header-height));
+  min-height: 520px;
+  background-image:
+    linear-gradient(var(--color-overlay-strong), var(--color-overlay-strong)),
+    url("../../images/fac_snu_02.jpg");
   background-size: cover;
   background-position: center;
+  padding: clamp(56px, 10vh, 140px) clamp(72px, 14vw, 240px);
 }
 
-.cta-content {
-  position: relative; /* overlay */
-  z-index: 2;
-  height: 100%;
+.hero__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 40px;
-  max-width: 2440px;
-  margin: 0 auto;
+  width: 100%;
   color: var(--color-white);
 }
 
-.cta-content h1 {
-  font-size: clamp(32px, 5vw, 70px);
+.hero__content h1 {
+  font-size: clamp(32px, 6vw, 72px);
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.cta-content p {
-  font-size: clamp(16px, 2.5vw, 20px);
+.hero__content p {
+  font-size: clamp(16px, 2.2vw, 22px);
   line-height: 1.6;
   color: var(--color-text-on-dark-muted);
 }
 
-.cta-overlay {
-  position: absolute;
-  inset: 0;
-  background: var(--color-overlay-strong);
-}
-
-.cta-bar {
-  position: absolute;
-  right: 220px;
-  bottom: 100px;
-  transform: translateX(-50%);
-  z-index: 3;
+.hero__quick-links {
   background: var(--color-black);
   border-radius: var(--radius-pill);
+  align-self: flex-end;
   display: flex;
-  gap: 60px;
-  padding: 20px 70px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 2.2vw, 32px);
+  width: min(600px, 100%);
+  padding: clamp(12px, 2vw, 18px) clamp(18px, 4vw, 44px);
 }
 
-.cta-bar a {
+.hero__quick-links a {
   color: var(--color-white);
   text-decoration: none;
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px);
   font-weight: 600;
   white-space: nowrap;
   opacity: 0.85;
   transition: opacity var(--transition-fast);
 }
 
-.cta-bar a:hover {
+.hero__quick-links a:hover {
   opacity: 1;
 }
 
-.image-section {
+.hero-media {
   position: relative;
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 460px;
+  }
+}
+
 @media (max-width: 768px) {
-  .cta-socket {
-    height: 360px;
+  .hero {
+    min-height: 420px;
+    padding: 40px 30px;
   }
 
-  .cta-bar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 24px 32px;
+  .hero__quick-links {
+    width: 100%;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: 18px;
   }
 }
