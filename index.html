@@ -9,34 +9,33 @@
   <link rel="stylesheet" href="assets/css/pages/home.css">
 </head>
 <body>
-  <site-header></site-header>
+  <app-layout>
+    <section class="cta-socket">
+      <div class="cta-overlay"></div>
 
-  <section class="cta-socket">
-    <div class="cta-overlay"></div>
+      <div class="cta-content">
+        <h1>Robotics for Mankind</h1>
+        <p>
+          We build intelligent systems optimized for medical environments<br>
+          with stable and reliable control technologies.
+        </p>
+      </div>
 
-    <div class="cta-content">
-      <h1>Robotics for Mankind</h1>
-      <p>
-        We build intelligent systems optimized for medical environments<br>
-        with stable and reliable control technologies.
-      </p>
-    </div>
+      <div class="cta-bar">
+        <a href="/product/">Products</a>
+        <a href="/technology/">Technology</a>
+        <a href="/certification/">Certification</a>
+        <a href="/contact/">Contact</a>
+      </div>
+    </section>
 
-    <div class="cta-bar">
-      <a href="/product/">Products</a>
-      <a href="/technology/">Technology</a>
-      <a href="/certification/">Certification</a>
-      <a href="/contact/">Contact</a>
-    </div>
-  </section>
+    <section class="image-section">
+      <scroll-cta-button href="/product/" label="View Products" threshold="300"></scroll-cta-button>
+      <img src="your-image.jpg" alt="">
+    </section>
+  </app-layout>
 
-  <section class="image-section">
-    <scroll-cta-button href="/product/" label="View Products" threshold="300"></scroll-cta-button>
-    <img src="your-image.jpg" alt="">
-  </section>
-
-  <site-footer></site-footer>
-
+  <script src="assets/js/components/app-layout.js" defer></script>
   <script src="assets/js/components/site-header.js" defer></script>
   <script src="assets/js/components/site-footer.js" defer></script>
   <script src="assets/js/components/scroll-cta-button.js" defer></script>
