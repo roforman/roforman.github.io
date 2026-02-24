@@ -34,9 +34,8 @@ class SiteHeader extends HTMLElement {
           </button>
           <nav id="site-nav" class="nav-menu">
             <a href="/company/">Company</a>
+            <a href="/careers/">Careers</a>
             <a href="/product/">Products</a>
-            <a href="/technology/">Technology</a>
-            <a href="/certification/">Certification</a>
             <a href="/contact/">Contact</a>
           </nav>
         </div>

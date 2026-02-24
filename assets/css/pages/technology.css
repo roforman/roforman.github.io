@@ -1,8 +1,0 @@
-.technology-gallery {
-  --media-card-bg: var(--color-bg-page);
-  --media-card-shadow: none;
-}
-
-.technology-gallery__grid {
-  margin-top: 16px;
-}

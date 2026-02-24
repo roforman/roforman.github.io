@@ -40,6 +40,15 @@
   color: var(--color-text-primary);
 }
 
+.company-technology {
+  --media-card-bg: var(--color-bg-page);
+  --media-card-shadow: none;
+}
+
+.company-technology-gallery__grid {
+  margin-top: 16px;
+}
+
 @media (max-width: 768px) {
   .company-page-main {
     padding-bottom: 24px;
