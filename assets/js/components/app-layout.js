@@ -8,6 +8,7 @@ class AppLayout extends HTMLElement {
       import("/assets/js/components/site-header.js"),
       import("/assets/js/components/site-footer.js"),
       import("/assets/js/behaviors/accordion.js"),
+      import("/assets/js/behaviors/careers-jobs.js"),
     ]);
     AppLayout.modulesLoaded = true;
   }

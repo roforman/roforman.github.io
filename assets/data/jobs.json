@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Robotics Control Engineer",
+    "employmentType": "Full-time",
+    "team": "R&D Team",
+    "location": "Seoul",
+    "experience": "3+ years experience",
+    "description": "Design and validate control algorithms for medical and assistive robotic systems, including integration testing and performance tuning."
+  },
+  {
+    "title": "Embedded Software Engineer",
+    "employmentType": "Full-time",
+    "team": "Platform Team",
+    "location": "Seoul",
+    "experience": "2+ years experience",
+    "description": "Develop firmware and device interfaces for motor control, sensing, and system communication in robotics platforms."
+  },
+  {
+    "title": "Product / Research Intern",
+    "employmentType": "Internship",
+    "team": "Research Program",
+    "location": "On-site / Hybrid",
+    "experience": "3-6 months",
+    "description": "Support prototype testing, experiment documentation, and product validation workflows with engineering and research teams."
+  }
+]
