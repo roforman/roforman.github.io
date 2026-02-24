@@ -22,10 +22,6 @@ class SiteHeader extends HTMLElement {
             </a>
           </div>
           <div class="header-actions">
-            <div class="lang-switch" role="group" aria-label="Language">
-              <button type="button" class="lang-switch__btn" data-lang="ko">KO</button>
-              <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
-            </div>
             <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
               <span class="menu-toggle__line"></span>
               <span class="menu-toggle__line"></span>
@@ -37,6 +33,10 @@ class SiteHeader extends HTMLElement {
               <a href="/product/" data-key="header.products">Products</a>
               <a href="/contact/" data-key="header.contact">Contact</a>
             </nav>
+            <div class="lang-switch" role="group" aria-label="Language">
+              <button type="button" class="lang-switch__btn" data-lang="ko">KO</button>
+              <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+            </div>
           </div>
         </div>
       </header>
