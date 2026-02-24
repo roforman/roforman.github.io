@@ -19,6 +19,74 @@ class AppRouter {
     );
   }
 
+  getAbsoluteHref(href) {
+    return new URL(href, window.location.href).href;
+  }
+
+  waitForStylesheet(link) {
+    if (link.sheet) return Promise.resolve();
+
+    return new Promise((resolve, reject) => {
+      const onLoad = () => {
+        cleanup();
+        resolve();
+      };
+      const onError = () => {
+        cleanup();
+        reject(new Error(`Failed to load stylesheet: ${link.href}`));
+      };
+      const cleanup = () => {
+        link.removeEventListener("load", onLoad);
+        link.removeEventListener("error", onError);
+      };
+
+      link.addEventListener("load", onLoad, { once: true });
+      link.addEventListener("error", onError, { once: true });
+    });
+  }
+
+  async syncRouteStyles(routeStyleHrefs) {
+    const head = document.head;
+    const currentLinks = Array.from(
+      head.querySelectorAll('link[rel="stylesheet"][data-route-style="true"]')
+    );
+    const currentByHref = new Map(
+      currentLinks.map((link) => [this.getAbsoluteHref(link.getAttribute("href") || link.href), link])
+    );
+
+    const pendingLoads = [];
+    const nextLinks = [];
+
+    routeStyleHrefs.forEach((href) => {
+      const absoluteHref = this.getAbsoluteHref(href);
+      let link = currentByHref.get(absoluteHref);
+
+      if (!link) {
+        link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = absoluteHref;
+        link.dataset.routeStyle = "true";
+        head.append(link);
+        pendingLoads.push(this.waitForStylesheet(link));
+      }
+
+      currentByHref.delete(absoluteHref);
+      nextLinks.push(link);
+    });
+
+    if (pendingLoads.length > 0) {
+      await Promise.all(pendingLoads);
+    }
+
+    nextLinks.forEach((link) => {
+      head.append(link);
+    });
+
+    currentByHref.forEach((link) => {
+      link.remove();
+    });
+  }
+
   init() {
     document.addEventListener("click", this.onClick);
     window.addEventListener("popstate", this.onPopState);
@@ -62,16 +130,21 @@ class AppRouter {
     return html;
   }
 
-  parsePage(html) {
+  parsePage(html, url) {
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");
     const nextLayout = doc.querySelector("app-layout");
     if (!nextLayout) return null;
 
+    const routeStyleHrefs = Array.from(
+      doc.querySelectorAll('link[rel="stylesheet"][data-route-style="true"]')
+    ).map((link) => new URL(link.getAttribute("href") || "", url.href).href);
+
     return {
       title: doc.title,
       lang: doc.documentElement.lang || "en",
       layoutInnerHTML: nextLayout.innerHTML,
+      routeStyleHrefs,
     };
   }
 
@@ -84,11 +157,13 @@ class AppRouter {
 
     try {
       const html = await this.fetchPage(url);
-      const page = this.parsePage(html);
+      const page = this.parsePage(html, url);
       if (!page) {
         window.location.href = url.href;
         return;
       }
+
+      await this.syncRouteStyles(page.routeStyleHrefs);
 
       currentLayout.innerHTML = page.layoutInnerHTML;
       document.title = page.title;
