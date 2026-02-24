@@ -93,3 +93,8 @@ if (document.readyState === "loading") {
 } else {
   initAccordions();
 }
+
+document.addEventListener("page:navigated", (event) => {
+  const root = event.detail?.root instanceof Element ? event.detail.root : document;
+  initAccordions(root);
+});

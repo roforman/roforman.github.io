@@ -5,6 +5,20 @@ class AppRouter {
     this.onPopState = this.onPopState.bind(this);
   }
 
+  notifyNavigated({ url, push }) {
+    document.dispatchEvent(
+      new CustomEvent("page:navigated", {
+        detail: {
+          path: url.pathname,
+          search: url.search,
+          hash: url.hash,
+          push,
+          root: document.querySelector("app-layout"),
+        },
+      })
+    );
+  }
+
   init() {
     document.addEventListener("click", this.onClick);
     window.addEventListener("popstate", this.onPopState);
@@ -85,6 +99,7 @@ class AppRouter {
       }
 
       window.scrollTo({ top: 0, behavior: "auto" });
+      this.notifyNavigated({ url, push });
     } catch {
       window.location.href = url.href;
     }

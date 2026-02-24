@@ -7,6 +7,7 @@ class AppLayout extends HTMLElement {
     await Promise.all([
       import("/assets/js/components/site-header.js"),
       import("/assets/js/components/site-footer.js"),
+      import("/assets/js/behaviors/accordion.js"),
     ]);
     AppLayout.modulesLoaded = true;
   }
