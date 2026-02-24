@@ -9,37 +9,44 @@
 </head>
 <body>
   <app-layout>
-    <section class="video-section">
-      <div class="video-wrapper">
-        <video controls>
-          <source src="../assets/media/panel-assembly.mkv" type="video/mp4">
-        </video>
-      </div>
+    <main class="page-main">
+      <section class="page-hero">
+        <h1>Company</h1>
+        <p>Explore ROFORMAN lab research scenes, prototype demonstrations, and development environments.</p>
+      </section>
 
-      <div class="video-wrapper">
-        <iframe
-          src="https://www.youtube.com/embed/BAmeOK2YKj0?si=FZoPP-Y9ARpCsIw8"
-          title="YouTube video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </section>
+      <section class="video-section">
+        <div class="video-wrapper">
+          <video controls>
+            <source src="../assets/media/panel-assembly.mkv" type="video/mp4">
+          </video>
+        </div>
 
-    <section class="company-gallery">
-      <h2 class="company-gallery__title">Lab Research Scenes</h2>
-      <div class="company-gallery__grid">
-        <figure class="company-gallery__item">
-          <img src="../assets/images/technology-wearable-assistive-robot-test-01.png" alt="Wearable assistive robot test in lab">
-          <figcaption>Wearable assistive robot evaluation in a real lab environment.</figcaption>
-        </figure>
-        <figure class="company-gallery__item">
-          <img src="../assets/images/technology-humanoid-robot-demonstration-01.png" alt="Humanoid robot demonstration in lab">
-          <figcaption>Humanoid robot demonstration from earlier platform research.</figcaption>
-        </figure>
-      </div>
-    </section>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/BAmeOK2YKj0?si=FZoPP-Y9ARpCsIw8"
+            title="YouTube video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+      <section class="company-gallery">
+        <h2 class="company-gallery__title">Lab Research Scenes</h2>
+        <div class="company-gallery__grid">
+          <figure class="company-gallery__item">
+            <img src="../assets/images/technology-wearable-assistive-robot-test-01.png" alt="Wearable assistive robot test in lab">
+            <figcaption>Wearable assistive robot evaluation in a real lab environment.</figcaption>
+          </figure>
+          <figure class="company-gallery__item">
+            <img src="../assets/images/technology-humanoid-robot-demonstration-01.png" alt="Humanoid robot demonstration in lab">
+            <figcaption>Humanoid robot demonstration from earlier platform research.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
   </app-layout>
 
   <script src="../assets/js/components/app-router.js" defer></script>
