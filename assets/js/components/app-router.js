@@ -1,6 +1,7 @@
 class AppRouter {
   constructor() {
     this.cache = new Map();
+    this.navigationSeq = 0;
     this.onClick = this.onClick.bind(this);
     this.onPopState = this.onPopState.bind(this);
   }
@@ -149,6 +150,7 @@ class AppRouter {
   }
 
   async navigate(url, { push = true } = {}) {
+    const navigationId = ++this.navigationSeq;
     const currentLayout = document.querySelector("app-layout");
     if (!currentLayout) {
       window.location.href = url.href;
@@ -157,6 +159,8 @@ class AppRouter {
 
     try {
       const html = await this.fetchPage(url);
+      if (navigationId !== this.navigationSeq) return;
+
       const page = this.parsePage(html, url);
       if (!page) {
         window.location.href = url.href;
@@ -164,10 +168,12 @@ class AppRouter {
       }
 
       await this.syncRouteStyles(page.routeStyleHrefs);
+      if (navigationId !== this.navigationSeq) return;
 
       currentLayout.innerHTML = page.layoutInnerHTML;
       document.title = page.title;
       document.documentElement.lang = page.lang;
+      if (navigationId !== this.navigationSeq) return;
 
       if (push) {
         window.history.pushState({}, "", url.pathname + url.search + url.hash);
