@@ -4,7 +4,7 @@ function setupAccordion(container) {
   const items = Array.from(container.querySelectorAll("details"));
 
   items.forEach((item) => {
-    const answer = item.querySelector(".faq-answer");
+    const answer = item.querySelector(".accordion-panel");
     if (!answer) return;
 
     if (item.open) {
@@ -17,7 +17,7 @@ function setupAccordion(container) {
   });
 
   const animateOpen = (item) => {
-    const answer = item.querySelector(".faq-answer");
+    const answer = item.querySelector(".accordion-panel");
     if (!answer || item.dataset.animating === "true") return;
 
     item.dataset.animating = "true";
@@ -42,7 +42,7 @@ function setupAccordion(container) {
   };
 
   const animateClose = (item) => {
-    const answer = item.querySelector(".faq-answer");
+    const answer = item.querySelector(".accordion-panel");
     if (!answer || item.dataset.animating === "true") return;
 
     item.dataset.animating = "true";

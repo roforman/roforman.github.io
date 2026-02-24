@@ -49,19 +49,19 @@
   margin-bottom: 0;
 }
 
-.faq-list {
+.accordion {
   display: grid;
   gap: 12px;
 }
 
-.faq-item {
+.accordion-item {
   border: 1px solid var(--color-border);
   border-radius: calc(var(--radius-md) - 4px);
   background: rgba(255, 255, 255, 0.7);
   overflow: hidden;
 }
 
-.faq-item summary {
+.accordion-item summary {
   cursor: pointer;
   list-style: none;
   padding: 16px 18px;
@@ -72,11 +72,11 @@
   padding-right: 44px;
 }
 
-.faq-item summary::-webkit-details-marker {
+.accordion-item summary::-webkit-details-marker {
   display: none;
 }
 
-.faq-item summary::after {
+.accordion-item summary::after {
   content: "+";
   position: absolute;
   right: 18px;
@@ -88,12 +88,12 @@
   transition: transform 200ms ease;
 }
 
-.faq-item.is-expanded summary::after {
+.accordion-item.is-expanded summary::after {
   content: "+";
   transform: translateY(-50%) rotate(45deg);
 }
 
-.faq-answer {
+.accordion-panel {
   overflow: hidden;
   height: 0;
   border-top: 1px solid transparent;
@@ -102,22 +102,22 @@
   transition: height 260ms ease, opacity 180ms ease, border-color 180ms ease;
 }
 
-.faq-answer__inner {
+.accordion-panel__inner {
   min-height: 0;
   transform: translateY(-6px);
   transition: transform 220ms ease;
 }
 
-.faq-item.is-expanded .faq-answer {
+.accordion-item.is-expanded .accordion-panel {
   border-top-color: var(--color-border);
   opacity: 1;
 }
 
-.faq-item.is-expanded .faq-answer__inner {
+.accordion-item.is-expanded .accordion-panel__inner {
   transform: translateY(0);
 }
 
-.faq-answer p {
+.accordion-panel p {
   margin: 0;
   padding: 12px 18px 16px;
   color: var(--color-text-secondary);
@@ -133,24 +133,24 @@
     margin-bottom: 16px;
   }
 
-  .faq-item summary {
+  .accordion-item summary {
     padding: 14px 16px;
     padding-right: 40px;
   }
 
-  .faq-item summary::after {
+  .accordion-item summary::after {
     right: 16px;
   }
 
-  .faq-answer p {
+  .accordion-panel p {
     padding: 10px 16px 14px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .faq-item summary::after,
-  .faq-answer,
-  .faq-answer__inner {
+  .accordion-item summary::after,
+  .accordion-panel,
+  .accordion-panel__inner {
     transition: none;
   }
 }
