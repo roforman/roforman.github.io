@@ -87,29 +87,7 @@
 }
 
 .home-overview__gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.home-overview__item {
-  background: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-elevated);
-}
-
-.home-overview__item img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.home-overview__item figcaption {
-  padding: 14px 16px;
-  line-height: 1.6;
-  color: var(--color-text-secondary);
+  --media-grid-min: 260px;
 }
 
 @media (max-width: 1024px) {

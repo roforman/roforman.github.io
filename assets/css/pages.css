@@ -1,3 +1,4 @@
 /* Shared page/behavior styles used across routes. */
 @import url("./behaviors/accordion.css");
 @import url("./pages/section-page.css");
+@import url("./pages/media.css");

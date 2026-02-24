@@ -1,0 +1,28 @@
+/* =====================
+  MEDIA GRID / CARD (SHARED)
+===================== */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--media-grid-min, 280px), 1fr));
+  gap: var(--media-grid-gap, 20px);
+}
+
+.media-card {
+  background: var(--media-card-bg, var(--color-white));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--media-card-shadow, var(--shadow-elevated));
+}
+
+.media-card > img {
+  width: 100%;
+  aspect-ratio: var(--media-card-image-ratio, 4 / 3);
+  object-fit: cover;
+}
+
+.media-card > figcaption {
+  padding: var(--media-card-caption-padding, 14px 16px);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
