@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "home": "ROFORMAN",
+    "company": "Company | ROFORMAN",
+    "product": "Products | ROFORMAN",
+    "contact": "Contact | ROFORMAN",
+    "careers": "Careers | ROFORMAN"
+  },
+  "header": {
+    "company": "Company",
+    "careers": "Careers",
+    "products": "Products",
+    "contact": "Contact",
+    "menuToggle": "Toggle menu",
+    "langLabel": "Choose language",
+    "langKo": "KO",
+    "langEn": "EN"
+  },
+  "footer": {
+    "line1": "Robotics for Mankind",
+    "line2": "ROFORMAN Inc.",
+    "line3": "Address: 6th floor, 214, Yulgok-ro, Jongno-gu, Seoul, Korea",
+    "line4": "e-mail: info@roforman.com / ybbang@snu.ac.kr"
+  },
+  "home": {
+    "heroTitle": "Robotics for Mankind",
+    "heroBody": "We build intelligent systems optimized for medical environments<br>with stable and reliable control technologies.",
+    "quickProducts": "Products",
+    "quickTechnology": "Technology",
+    "quickContact": "Contact",
+    "ctaViewProducts": "View Products",
+    "overviewTitle": "Company Overview",
+    "overviewBody": "ROFORMAN develops practical robotic systems for medical and assistive environments. Our team combines hardware design, control engineering, and validation workflows to deliver reliable technologies from lab prototypes to real-world use.",
+    "cap1": "Infusion pump prototype and dosage workflow test setup.",
+    "cap2": "Wearable assistive robot evaluation in a lab environment.",
+    "cap3": "Foldable mobility platform prototype and compact mechanism study.",
+    "cap4": "Humanoid robot demonstration from platform research work.",
+    "cap5": "Stair-climbing mobility test with stability verification.",
+    "cap6": "Exoskeleton control test focused on precision and response."
+  },
+  "company": {
+    "heroTitle": "Company",
+    "heroDesc": "Explore ROFORMAN lab research scenes, prototype demonstrations, and core technology capabilities.",
+    "researchTitle": "Lab Research Scenes",
+    "researchCap1": "Wearable assistive robot evaluation in a real lab environment.",
+    "researchCap2": "Humanoid robot demonstration from earlier platform research.",
+    "coreTechTitle": "Core Technologies",
+    "coreTechDesc": "We implement reliable robotics through intelligent control, stability validation, and medical-grade design.",
+    "techGalleryTitle": "Technology Validation Images",
+    "techCap1": "Foldable mobility platform prototype and compact transformation study.",
+    "techCap2": "Wearable exoskeleton control test focused on precision and response stability."
+  },
+  "product": {
+    "heroTitle": "Products",
+    "heroDesc": "Explore ROFORMAN products designed for real medical environments.",
+    "overviewTitle": "Product Overview",
+    "overviewDesc": "Our solutions combine precision control and stability for use in clinical and research workflows.",
+    "galleryTitle": "Product Field Images",
+    "cap1": "Infusion pump prototype configured for controlled dose workflow testing.",
+    "cap2": "Stair-climbing mobility platform tested in a step traversal scenario."
+  },
+  "contact": {
+    "heroTitle": "Contact",
+    "heroDesc": "Find quick answers to common questions below. If you need more help, use the contact information at the end of the page.",
+    "faqTitle": "FAQ",
+    "q1": "What does ROFORMAN provide?",
+    "a1": "ROFORMAN develops robotics-related technologies and products for industrial and applied environments, including platform and integration support.",
+    "q2": "How can I request a product demo or partnership discussion?",
+    "a2": "Please send a short overview of your company, use case, and timeline to our contact email. We will route your inquiry to the relevant team.",
+    "q3": "Do you support technical collaboration with universities or research labs?",
+    "a3": "Yes. We are open to technical collaboration and joint research discussions depending on the project scope and alignment.",
+    "q4": "Where should I send technical support or integration questions?",
+    "a4": "Include your product/model information, issue summary, and any logs or images available in your email so we can respond more efficiently.",
+    "contactInfoTitle": "Contact Information",
+    "contactInfoBody": "e-mail: info@roforman.com / ybbang@snu.ac.kr"
+  },
+  "careers": {
+    "heroTitle": "Careers",
+    "heroDesc": "Join ROFORMAN to build reliable robotics systems for medical and assistive environments.",
+    "hiringStatusTitle": "Hiring Status",
+    "hiringStatusDesc": "We are currently reviewing applications for engineering and product roles. Please check the openings below and apply by email with your resume and portfolio (if applicable).",
+    "openPositionsTitle": "Open Positions",
+    "openPositionsLoading": "Loading...",
+    "loadingJobs": "Loading open positions...",
+    "noJobs": "There are no open positions at the moment. Please check back later.",
+    "jobsLoadError": "Failed to load open positions. Please try again later.",
+    "rolesCount": "{{count}} roles",
+    "roleCountOne": "{{count}} role",
+    "processTitle": "Hiring Process",
+    "step1Title": "Application",
+    "step1Body": "Send your resume and a short introduction to info@roforman.com (portfolio / GitHub link recommended for engineering roles).",
+    "step2Title": "Screening Interview",
+    "step2Body": "We review background, role fit, and project experience. Some roles may include a short technical discussion.",
+    "step3Title": "Technical / Team Interview",
+    "step3Body": "Role-specific interview with team members covering problem-solving, implementation experience, and collaboration style.",
+    "step4Title": "Offer & Onboarding",
+    "step4Body": "Successful candidates receive an offer and onboarding plan with role expectations and initial project scope.",
+    "applyButton": "Apply"
+  }
+}

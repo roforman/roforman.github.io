@@ -5,6 +5,7 @@ class AppLayout extends HTMLElement {
   static async ensureModules() {
     if (AppLayout.modulesLoaded) return;
     await Promise.all([
+      import("/assets/js/behaviors/i18n.js"),
       import("/assets/js/components/site-header.js"),
       import("/assets/js/components/site-footer.js"),
       import("/assets/js/behaviors/accordion.js"),

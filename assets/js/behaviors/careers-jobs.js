@@ -12,6 +12,7 @@ function fetchJobs() {
 }
 
 function createJobCard(job) {
+  const i18n = window.roformanI18n;
   const article = document.createElement("article");
   article.className = "job-card";
 
@@ -44,7 +45,7 @@ function createJobCard(job) {
   applyButton.href = typeof job.applyUrl === "string" && job.applyUrl.trim() ? job.applyUrl : DEFAULT_APPLY_URL;
   applyButton.target = "_blank";
   applyButton.rel = "noopener noreferrer";
-  applyButton.textContent = "Apply";
+  applyButton.textContent = i18n ? i18n.t("careers.applyButton") : "Apply";
 
   actions.append(applyButton);
 
@@ -53,9 +54,14 @@ function createJobCard(job) {
 }
 
 function updateCount(container, count) {
+  const i18n = window.roformanI18n;
   const countEl = container.closest(".careers-openings")?.querySelector(".careers-count");
   if (!countEl) return;
-  countEl.textContent = `${count} role${count === 1 ? "" : "s"}`;
+  if (!i18n) {
+    countEl.textContent = `${count} role${count === 1 ? "" : "s"}`;
+    return;
+  }
+  countEl.textContent = i18n.t(count === 1 ? "careers.roleCountOne" : "careers.rolesCount", { count });
 }
 
 function renderJobs(container, jobs) {
@@ -64,7 +70,9 @@ function renderJobs(container, jobs) {
   if (!Array.isArray(jobs) || jobs.length === 0) {
     const empty = document.createElement("p");
     empty.className = "job-list__empty";
-    empty.textContent = "There are no open positions at the moment. Please check back later.";
+    empty.textContent = window.roformanI18n
+      ? window.roformanI18n.t("careers.noJobs")
+      : "There are no open positions at the moment. Please check back later.";
     container.append(empty);
     updateCount(container, 0);
     return;
@@ -83,7 +91,9 @@ function renderError(container) {
   container.innerHTML = "";
   const error = document.createElement("p");
   error.className = "job-list__empty";
-  error.textContent = "Failed to load open positions. Please try again later.";
+  error.textContent = window.roformanI18n
+    ? window.roformanI18n.t("careers.jobsLoadError")
+    : "Failed to load open positions. Please try again later.";
   container.append(error);
   updateCount(container, 0);
 }
@@ -111,4 +121,8 @@ if (document.readyState === "loading") {
 document.addEventListener("page:navigated", (event) => {
   const root = event.detail?.root instanceof Element ? event.detail.root : document;
   void initCareersJobs(root);
+});
+
+document.addEventListener("i18n:change", () => {
+  void initCareersJobs(document);
 });

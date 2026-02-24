@@ -1,5 +1,8 @@
 class ScrollCtaButton extends HTMLElement {
   static styleTextPromise;
+  static get observedAttributes() {
+    return ["href", "label"];
+  }
 
   static async loadStyleText() {
     if (!ScrollCtaButton.styleTextPromise) {
@@ -17,14 +20,12 @@ class ScrollCtaButton extends HTMLElement {
       this.attachShadow({ mode: "open" });
     }
 
-    const href = this.getAttribute("href") || "/product/";
-    const label = this.getAttribute("label") || "View Products";
     const threshold = Number(this.getAttribute("threshold") || "300");
     const styleText = await ScrollCtaButton.loadStyleText();
 
     this.shadowRoot.innerHTML = `
       <style>${styleText}</style>
-      <a href="${href}" class="scroll-cta">${label}</a>
+      <a href="${this.getAttribute("href") || "/product/"}" class="scroll-cta">${this.getAttribute("label") || "View Products"}</a>
     `;
     this.button = this.shadowRoot.querySelector(".scroll-cta");
 
@@ -39,6 +40,16 @@ class ScrollCtaButton extends HTMLElement {
 
     this.handleScroll();
     window.addEventListener("scroll", this.handleScroll);
+  }
+
+  attributeChangedCallback(name, _oldValue, newValue) {
+    if (!this.shadowRoot || !this.button) return;
+    if (name === "href" && typeof newValue === "string") {
+      this.button.setAttribute("href", newValue);
+    }
+    if (name === "label" && typeof newValue === "string") {
+      this.button.textContent = newValue;
+    }
   }
 
   disconnectedCallback() {
