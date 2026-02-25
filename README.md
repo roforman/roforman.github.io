@@ -25,28 +25,18 @@ ROFORMAN 소개용 정적 웹사이트 프로젝트입니다.
 
 ## 실행 방법 (로컬)
 
-정적 파일 서버로 실행해야 합니다. (`file://` 직접 열기 비권장)
+VS Code 확장 프로그램 `Live Server`로 실행합니다. (`file://` 직접 열기 비권장)
 
-### Python (권장, 간단)
-
-```bash
-python -m http.server 8000
-```
-
-브라우저에서 `http://localhost:8000` 접속
-
-### Node (예시)
-
-```bash
-npx serve .
-```
+1. VS Code에서 프로젝트 폴더를 엽니다.
+2. `index.html` 파일을 엽니다.
+3. 우클릭 -> `Open with Live Server`를 선택합니다.
 
 ## 프로젝트 구조
 
 ```text
 assets/
   css/
-    components/      # Web Component 스타일
+    components/      # Web Component 전용 스타일
     behaviors/       # behavior 전용 스타일 (예: accordion)
     pages/           # 페이지/패턴 스타일
   data/
@@ -77,7 +67,7 @@ index.html
 ### 2) 채용 공고 목록
 
 - 공고 데이터는 `assets/data/jobs.json`에서 수정
-- 현재는 원문 데이터 그대로 렌더링되며, i18n 토글과 별도로 유지됨
+- 현재는 원문 데이터 그대로 렌더링되며 i18n 토글과 별도로 유지됨
 - `Apply` 버튼은 공고별 `applyUrl`이 있으면 해당 URL 사용, 없으면 Google Forms 홈으로 이동
 
 예시:
@@ -116,18 +106,6 @@ index.html
 
 ## 배포 메모
 
-### GitHub Pages
-
-- 가능 (정적 배포)
-- 주의: 현재 링크가 절대경로(`/company/`) 기반이라 `username.github.io/repo-name` 같은 서브경로 배포 시 base path 이슈가 있을 수 있음
-
-### Cloudflare Pages
-
-- 현재 구조와 잘 맞음
-- 추후 `Contact` 폼을 서버리스(Functions)로 확장하기 좋음
-
-## 향후 계획 (예정)
-
-- 블로그 기능 추가 (Markdown/MDX 기반 콘텐츠 빌드 파이프라인)
-- 문의 폼 서버리스 연동 (Cloudflare Pages Functions 등)
-
+- 현재: `GitHub Pages`로 배포 중
+- 추후 가능성: 블로그 기능 또는 서버리스 기능이 필요해지면 `Cloudflare Pages`로 이전 가능
+- 현재 시점에서는 Cloudflare Pages 이전 계획 없음
