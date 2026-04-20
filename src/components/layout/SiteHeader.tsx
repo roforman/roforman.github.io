@@ -31,8 +31,6 @@ export default function SiteHeader() {
           </button>
           <nav className={`${styles.navMenu} ${menuOpen ? styles.navMenuOpen : ''}`}>
             <Link href="/company/" onClick={() => setMenuOpen(false)}>{t('header.company')}</Link>
-            <Link href="/careers/" onClick={() => setMenuOpen(false)}>{t('header.careers')}</Link>
-            <Link href="/product/" onClick={() => setMenuOpen(false)}>{t('header.products')}</Link>
             <Link href="/contact/" onClick={() => setMenuOpen(false)}>{t('header.contact')}</Link>
           </nav>
           <div className={styles.langSwitch} role="group" aria-label={t('header.langLabel')}>
