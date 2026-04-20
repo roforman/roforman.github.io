@@ -6,7 +6,7 @@
   min-height: 520px;
   background-image:
     linear-gradient(var(--color-overlay-strong), var(--color-overlay-strong)),
-    url('/images/home-hero-bg.jpg');
+    url('/images/base.png');
   background-size: cover;
   background-position: center;
   padding: clamp(56px, 16vh, 140px) clamp(72px, 18vw, 400px);
