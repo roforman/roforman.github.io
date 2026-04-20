@@ -71,45 +71,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* C-arm 기술 카드 */}
-      <section className="page-card">
-        <h2 className={companyStyles.techItemTitle}>{t('company.carmTitle')}</h2>
-        <ul className={companyStyles.techList}>
-          <li>
-            {t('company.carmProblemTitle')}
-            <ul>
-              <li>{t('company.carmProblem1')}</li>
-              <li>{t('company.carmProblem2')}</li>
-            </ul>
-          </li>
-          <li>
-            {t('company.carmSolutionTitle')}
-            <ul>
-              <li>{t('company.carmSolution1')}</li>
-              <li>{t('company.carmSolution2')}</li>
-            </ul>
-          </li>
-        </ul>
-        <div className={companyStyles.techMediaGrid}>
-          <figure className={companyStyles.techFigure}>
-            <div className={companyStyles.techImgWrap}>
-              <Image src="/images/carm-1.png" alt="C-arm overview" fill style={{ objectFit: 'contain' }} />
-            </div>
-          </figure>
-          <figure className={companyStyles.techFigure}>
-            <div className={companyStyles.techImgWrap}>
-              <Image src="/images/carm-2.jpg" alt="C-arm platform" fill style={{ objectFit: 'contain' }} />
-            </div>
-            <figcaption>{t('company.carmImgCaption')}</figcaption>
-          </figure>
-          <figure className={companyStyles.techFigure}>
-            <div className={companyStyles.techImgWrap}>
-              <Image src="/images/carm-3.png" alt="C-arm diagram" fill style={{ objectFit: 'contain' }} />
-            </div>
-          </figure>
-        </div>
-      </section>
-
       {/* Upper Limb Power-Assist */}
       <section className="page-card">
         <h2 className={companyStyles.techItemTitle}>{t('company.upperLimbTitle')}</h2>
@@ -259,6 +220,45 @@ export default function HomePage() {
           <figure className={companyStyles.techFigure}>
             <div className={companyStyles.videoWrapper}>
               <iframe src="https://www.youtube.com/embed/pn6cQzaZ1TI" title="Abdominal breathing machine demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      {/* C-arm 기술 카드 */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.carmTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>
+            {t('company.carmProblemTitle')}
+            <ul>
+              <li>{t('company.carmProblem1')}</li>
+              <li>{t('company.carmProblem2')}</li>
+            </ul>
+          </li>
+          <li>
+            {t('company.carmSolutionTitle')}
+            <ul>
+              <li>{t('company.carmSolution1')}</li>
+              <li>{t('company.carmSolution2')}</li>
+            </ul>
+          </li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/carm-1.png" alt="C-arm overview" fill style={{ objectFit: 'contain' }} />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/carm-2.jpg" alt="C-arm platform" fill style={{ objectFit: 'contain' }} />
+            </div>
+            <figcaption>{t('company.carmImgCaption')}</figcaption>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/carm-3.png" alt="C-arm diagram" fill style={{ objectFit: 'contain' }} />
             </div>
           </figure>
         </div>
