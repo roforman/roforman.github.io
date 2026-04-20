@@ -316,6 +316,135 @@ export default function HomePage() {
           </figure>
         </div>
       </section>
+      {/* Human interactive humanoid arm & hand */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.humanoidTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.humanoidItem1')}</li>
+          <li>{t('company.humanoidItem2')}</li>
+          <li>{t('company.humanoidItem3')}</li>
+          <li>{t('company.humanoidItem4')}</li>
+          <li>{t('company.humanoidItem5')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/6OgnhO3vWe0" title="Humanoid arm demo 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/y1aYLcUu8F0" title="Humanoid arm demo 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/nNi4egJkOYA" title="Humanoid arm demo 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/CanpZVOt9RE" title="Humanoid arm demo 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      {/* 3-DOF anthropomorphic oculomotor simulator */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.oculomotorTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.oculomotorItem1')}</li>
+          <li>{t('company.oculomotorItem2')}</li>
+          <li>{t('company.oculomotorItem3')}</li>
+          <li>{t('company.oculomotorItem4')}</li>
+          <li>{t('company.oculomotorItem5')}</li>
+          <li>{t('company.oculomotorItem6')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/dNOdDt1hWfE" title="Oculomotor simulator demo 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/37AbY4JxyGA" title="Oculomotor simulator demo 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/lqJxRRdFAYs" title="Oculomotor simulator demo 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/UXXl_7sYrHc" title="Oculomotor simulator demo 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      {/* Kendo training robot */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.kendoTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.kendoItem1')}</li>
+          <li>{t('company.kendoItem2')}</li>
+          <li>{t('company.kendoItem3')}</li>
+          <li>{t('company.kendoItem4')}</li>
+          <li>{t('company.kendoItem5')}</li>
+          <li>{t('company.kendoItem6')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/JKZHQDbj2I4" title="Kendo robot demo 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/Nr7hV41j3Vg" title="Kendo robot demo 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/CvLhjYJ_pL0" title="Kendo robot demo 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/Om3l8pWL_yk" title="Kendo robot demo 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      {/* High power and precision smart actuators */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.actuatorTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.actuatorItem1')}</li>
+          <li>{t('company.actuatorItem2')}</li>
+          <li>{t('company.actuatorItem3')}</li>
+          <li>{t('company.actuatorItem4')}</li>
+          <li>{t('company.actuatorItem5')}</li>
+          <li>{t('company.actuatorItem6')}</li>
+          <li>{t('company.actuatorItem7')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/smart-actuator-1.jpg" alt="Smart actuator 1" fill style={{ objectFit: 'contain' }} />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/smart-actuator-2.jpg" alt="Smart actuator 2" fill style={{ objectFit: 'contain' }} />
+            </div>
+          </figure>
+        </div>
+      </section>
     </>
   )
 }
