@@ -132,14 +132,18 @@
 .rdInner {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 64px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rdTitle {
   font-size: clamp(22px, 3vw, 32px);
   font-weight: 700;
   color: #1a2e5a;
-  margin: 0 0 32px;
+  margin: 0;
+  text-align: center;
 }
 
 .rdList {
