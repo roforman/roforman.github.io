@@ -110,6 +110,160 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Upper Limb Power-Assist */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.upperLimbTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.upperLimbItem1')}</li>
+          <li>{t('company.upperLimbItem2')}</li>
+          <li>{t('company.upperLimbItem3')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/upperlimb-mechanism.jpg" alt="Upper limb mechanism" fill style={{ objectFit: 'contain' }} />
+            </div>
+            <figcaption>{t('company.upperLimbImgCaption1')}</figcaption>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/upperlimb-robot.jpg" alt="Upper limb robot" fill style={{ objectFit: 'contain' }} />
+            </div>
+            <figcaption>{t('company.upperLimbImgCaption2')}</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      {/* Power-assisted wheelchair */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.wheelchairTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.wheelchairItem1')}</li>
+          <li>{t('company.wheelchairItem2')}</li>
+          <li>{t('company.wheelchairItem3')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/BAmeOK2YKj0" title="Power-assisted wheelchair demo 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/X2zfbu-iNfA" title="Power-assisted wheelchair demo 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      {/* Stair-climbing wheelchair */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.stairTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.stairItem1')}</li>
+          <li>{t('company.stairItem2')}</li>
+          <li>{t('company.stairItem3')}</li>
+          <li>{t('company.stairItem4')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/MaNctP--nbo" title="Stair-climbing wheelchair demo 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/pgiCMoR1xyY" title="Stair-climbing wheelchair demo 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/_jy-N5AlqDw" title="Stair-climbing wheelchair demo 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      {/* 4-axis moving platform */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.fourAxisTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.fourAxisItem1')}</li>
+          <li>{t('company.fourAxisItem2')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/4axis-platform.png" alt="4-axis moving platform" fill style={{ objectFit: 'contain' }} />
+            </div>
+            <figcaption>{t('company.fourAxisImgCaption')}</figcaption>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/szzicbhpoCQ" title="4-axis platform demo 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/IQVq_zCz9pU" title="4-axis platform demo 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      {/* Automatic immobilization board */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.immobilizationTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.immobilizationItem1')}</li>
+          <li>{t('company.immobilizationItem2')}</li>
+          <li>{t('company.immobilizationItem3')}</li>
+          <li>{t('company.immobilizationItem4')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/immobilization-board-1.jpg" alt="Immobilization board 1" fill style={{ objectFit: 'contain' }} />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/immobilization-board-2.png" alt="Immobilization board 2" fill style={{ objectFit: 'contain' }} />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/wP8wQIZkYB8" title="Immobilization board demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      {/* Automatic abdominal breathing machines */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.abdominalTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.abdominalItem1')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/abdominal-breathing-1.jpg" alt="Abdominal breathing machine 1" fill style={{ objectFit: 'contain' }} />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/abdominal-breathing-2.jpg" alt="Abdominal breathing machine 2" fill style={{ objectFit: 'contain' }} />
+            </div>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.videoWrapper}>
+              <iframe src="https://www.youtube.com/embed/pn6cQzaZ1TI" title="Abdominal breathing machine demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+          </figure>
+        </div>
+      </section>
+
       {/* Exoskeletal 기술 카드 */}
       <section className="page-card">
         <h2 className={companyStyles.techItemTitle}>{t('company.exoTitle')}</h2>
