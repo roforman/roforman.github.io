@@ -1,0 +1,8 @@
+.galleryCard {
+  --media-card-bg: var(--color-bg-page);
+  --media-card-shadow: none;
+}
+
+.galleryGrid {
+  margin-top: 16px;
+}
