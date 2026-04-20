@@ -51,3 +51,70 @@
     gap: 20px;
   }
 }
+
+/* =====================
+  TECH ITEM CARDS
+===================== */
+.techItemTitle {
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 700;
+  color: #1a2e5a;
+  margin: 0 0 20px;
+  line-height: 1.4;
+}
+
+.techList {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.techList li {
+  font-size: clamp(14px, 1.5vw, 16px);
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+.techList ul {
+  list-style: circle;
+  padding-left: 22px;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.techList ul li {
+  color: #2d5c79;
+}
+
+.techMediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.techFigure {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+}
+
+.techFigure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.techFigure figcaption {
+  font-size: 13px;
+  color: #2d5c79;
+  text-align: center;
+  line-height: 1.4;
+}

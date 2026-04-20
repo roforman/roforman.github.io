@@ -63,6 +63,87 @@ export default function CompanyPage() {
           </figure>
         </div>
       </section>
+
+      {/* C-arm 기술 카드 */}
+      <section className="page-card">
+        <h2 className={styles.techItemTitle}>{t('company.carmTitle')}</h2>
+        <ul className={styles.techList}>
+          <li>
+            {t('company.carmProblemTitle')}
+            <ul>
+              <li>{t('company.carmProblem1')}</li>
+              <li>{t('company.carmProblem2')}</li>
+            </ul>
+          </li>
+          <li>
+            {t('company.carmSolutionTitle')}
+            <ul>
+              <li>{t('company.carmSolution1')}</li>
+              <li>{t('company.carmSolution2')}</li>
+            </ul>
+          </li>
+        </ul>
+        <div className={styles.techMediaGrid}>
+          <figure className={styles.techFigure}>
+            <Image src="/images/carm-2.jpg" alt="C-arm platform" width={400} height={280} />
+            <figcaption>{t('company.carmImgCaption')}</figcaption>
+          </figure>
+          <figure className={styles.techFigure}>
+            <Image src="/images/carm-3.png" alt="C-arm diagram" width={400} height={280} />
+          </figure>
+        </div>
+      </section>
+
+      {/* Exoskeletal 기술 카드 */}
+      <section className="page-card">
+        <h2 className={styles.techItemTitle}>{t('company.exoTitle')}</h2>
+        <ul className={styles.techList}>
+          <li>
+            {t('company.exoDeviceTitle')}
+            <ul>
+              <li>{t('company.exoDevice1')}</li>
+              <li>{t('company.exoDevice2')}</li>
+              <li>{t('company.exoDevice3')}</li>
+            </ul>
+          </li>
+          <li>
+            {t('company.exoSystemTitle')}
+            <ul>
+              <li>{t('company.exoSystem1')}</li>
+              <li>{t('company.exoSystem2')}</li>
+              <li>{t('company.exoSystem3')}</li>
+            </ul>
+          </li>
+        </ul>
+        <div className={styles.techMediaGrid}>
+          <figure className={styles.techFigure}>
+            <Image src="/images/exoskeletal-1.png" alt="Exoskeletal experimental setup" width={400} height={280} />
+            <figcaption>{t('company.exoImgCaption')}</figcaption>
+          </figure>
+          <figure className={styles.techFigure}>
+            <div className={styles.videoWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/ueK4BHaNQpk"
+                title="Master device"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <figcaption>{t('company.exoVideo1Caption')}</figcaption>
+          </figure>
+          <figure className={styles.techFigure}>
+            <div className={styles.videoWrapper}>
+              <iframe
+                src="https://www.youtube.com/embed/6sHSHove0Pg"
+                title="Teleoperation demonstration"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <figcaption>{t('company.exoVideo2Caption')}</figcaption>
+          </figure>
+        </div>
+      </section>
     </main>
   )
 }
