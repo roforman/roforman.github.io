@@ -163,6 +163,11 @@
 }
 
 @media (max-width: 768px) {
+  .about {
+    height: auto;
+    min-height: 56.25vw;
+  }
+
   .aboutInner {
     padding: 56px 20px;
     gap: 32px;
