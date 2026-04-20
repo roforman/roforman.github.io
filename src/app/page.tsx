@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
 import { useI18n } from '@/i18n/I18nContext'
 import styles from '@/styles/home.module.css'
@@ -17,10 +16,6 @@ export default function HomePage() {
         <div className={styles.heroContent}>
           <h1>{t('home.heroTitle')}</h1>
           <p dangerouslySetInnerHTML={{ __html: t('home.heroBody') }} />
-        </div>
-        <div className={styles.heroQuickLinks}>
-          <Link href="/company/#technology">{t('home.quickTechnology')}</Link>
-          <Link href="/contact/">{t('home.quickContact')}</Link>
         </div>
       </section>
 
