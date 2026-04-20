@@ -56,6 +56,117 @@
   opacity: 1;
 }
 
+/* =====================
+  ABOUT SECTION (PDF p.2)
+===================== */
+.about {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
+    url('/images/technology-wearable-assistive-robot-test-01.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aboutMain {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 600;
+  color: #1a2e5a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.aboutDesc {
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: #1a2e5a;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.aboutAddress {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-top: 1px solid rgba(26, 46, 90, 0.2);
+  padding-top: 24px;
+}
+
+.aboutAddress p {
+  font-size: clamp(13px, 1.3vw, 15px);
+  color: #1a2e5a;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.aboutAddress strong {
+  font-size: clamp(14px, 1.4vw, 16px);
+}
+
+/* =====================
+  R&D SECTION (PDF p.3)
+===================== */
+.rd {
+  background: #ffffff;
+}
+
+.rdInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.rdTitle {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 700;
+  color: #1a2e5a;
+  margin: 0 0 32px;
+}
+
+.rdList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rdList li {
+  font-size: clamp(14px, 1.5vw, 17px);
+  color: #1a2e5a;
+  padding: 14px 0;
+  border-bottom: 1px solid #e5e7eb;
+  line-height: 1.5;
+}
+
+.rdList li:first-child {
+  border-top: 1px solid #e5e7eb;
+}
+
+@media (max-width: 768px) {
+  .aboutInner {
+    padding: 56px 20px;
+    gap: 32px;
+  }
+
+  .rdInner {
+    padding: 56px 20px;
+  }
+}
+
 .overview {
   position: relative;
   max-width: 1200px;
