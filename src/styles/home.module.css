@@ -62,9 +62,7 @@
 .about {
   height: calc(100dvh - var(--header-height));
   min-height: 520px;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.82), rgba(255,255,255,0.82)),
-    url('/images/lab.jpg');
+  background-image: url('/images/lab.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
