@@ -85,11 +85,20 @@ export default function CompanyPage() {
         </ul>
         <div className={styles.techMediaGrid}>
           <figure className={styles.techFigure}>
-            <Image src="/images/carm-2.jpg" alt="C-arm platform" width={400} height={280} />
+            <div className={styles.techImgWrap}>
+              <Image src="/images/carm-1.png" alt="C-arm overview" fill style={{ objectFit: 'contain' }} />
+            </div>
+          </figure>
+          <figure className={styles.techFigure}>
+            <div className={styles.techImgWrap}>
+              <Image src="/images/carm-2.jpg" alt="C-arm platform" fill style={{ objectFit: 'contain' }} />
+            </div>
             <figcaption>{t('company.carmImgCaption')}</figcaption>
           </figure>
           <figure className={styles.techFigure}>
-            <Image src="/images/carm-3.png" alt="C-arm diagram" width={400} height={280} />
+            <div className={styles.techImgWrap}>
+              <Image src="/images/carm-3.png" alt="C-arm diagram" fill style={{ objectFit: 'contain' }} />
+            </div>
           </figure>
         </div>
       </section>
@@ -117,7 +126,9 @@ export default function CompanyPage() {
         </ul>
         <div className={styles.techMediaGrid}>
           <figure className={styles.techFigure}>
-            <Image src="/images/exoskeletal-1.png" alt="Exoskeletal experimental setup" width={400} height={280} />
+            <div className={styles.techImgWrap}>
+              <Image src="/images/exoskeletal-1.png" alt="Exoskeletal experimental setup" fill style={{ objectFit: 'contain' }} />
+            </div>
             <figcaption>{t('company.exoImgCaption')}</figcaption>
           </figure>
           <figure className={styles.techFigure}>

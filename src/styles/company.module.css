@@ -105,11 +105,13 @@
   margin: 0;
 }
 
-.techFigure img {
+.techImgWrap {
+  position: relative;
   width: 100%;
-  height: auto;
+  height: 200px;
   border-radius: 8px;
-  object-fit: cover;
+  overflow: hidden;
+  background: #f5f5f5;
 }
 
 .techFigure figcaption {
