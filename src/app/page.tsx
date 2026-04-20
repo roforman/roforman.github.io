@@ -47,6 +47,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Medication Compounding 기술 카드 */}
+      <section className="page-card">
+        <h2 className={companyStyles.techItemTitle}>{t('company.compoundingTitle')}</h2>
+        <ul className={companyStyles.techList}>
+          <li>{t('company.compoundingItem1')}</li>
+          <li>{t('company.compoundingItem2')}</li>
+          <li>{t('company.compoundingItem3')}</li>
+        </ul>
+        <div className={companyStyles.techMediaGrid}>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/compounding-structure.jpg" alt="Compounding system structure" fill style={{ objectFit: 'contain' }} />
+            </div>
+            <figcaption>{t('company.compoundingImgCaption1')}</figcaption>
+          </figure>
+          <figure className={companyStyles.techFigure}>
+            <div className={companyStyles.techImgWrap}>
+              <Image src="/images/compounding-prototype.jpg" alt="Compounding prototype" fill style={{ objectFit: 'contain' }} />
+            </div>
+            <figcaption>{t('company.compoundingImgCaption2')}</figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* C-arm 기술 카드 */}
       <section className="page-card">
         <h2 className={companyStyles.techItemTitle}>{t('company.carmTitle')}</h2>
