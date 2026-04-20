@@ -7,7 +7,7 @@ import { useI18n } from '@/i18n/I18nContext'
 import styles from '@/styles/header.module.css'
 
 export default function SiteHeader() {
-  const { lang, setLang, t } = useI18n()
+  const { t } = useI18n()
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -30,21 +30,8 @@ export default function SiteHeader() {
             <span className={styles.menuToggleLine} />
           </button>
           <nav className={`${styles.navMenu} ${menuOpen ? styles.navMenuOpen : ''}`}>
-            <Link href="/company/" onClick={() => setMenuOpen(false)}>{t('header.company')}</Link>
             <Link href="/contact/" onClick={() => setMenuOpen(false)}>{t('header.contact')}</Link>
           </nav>
-          <div className={styles.langSwitch} role="group" aria-label={t('header.langLabel')}>
-            {(['en', 'ko'] as const).map((l) => (
-              <button
-                key={l}
-                className={`${styles.langBtn} ${lang === l ? styles.langBtnActive : ''}`}
-                onClick={() => setLang(l)}
-                aria-pressed={lang === l}
-              >
-                {l.toUpperCase()}
-              </button>
-            ))}
-          </div>
         </div>
       </div>
     </header>
