@@ -5,7 +5,6 @@ import { useI18n } from '@/i18n/I18nContext'
 import styles from '@/styles/home.module.css'
 import companyStyles from '@/styles/company.module.css'
 
-const RD_ITEMS = Array.from({ length: 13 }, (_, i) => `home.rdItem${i + 1}`)
 
 export default function HomePage() {
   const { t } = useI18n()
@@ -39,11 +38,6 @@ export default function HomePage() {
       <section className={styles.rd}>
         <div className={styles.rdInner}>
           <h2 className={styles.rdTitle}>{t('home.rdTitle')}</h2>
-          <ul className={styles.rdList}>
-            {RD_ITEMS.map((key) => (
-              <li key={key}>{t(key)}</li>
-            ))}
-          </ul>
         </div>
       </section>
 
