@@ -34,7 +34,7 @@ export default function SiteHeader() {
             <Link href="/contact/" onClick={() => setMenuOpen(false)}>{t('header.contact')}</Link>
           </nav>
           <div className={styles.langSwitch} role="group" aria-label={t('header.langLabel')}>
-            {(['ko', 'en'] as const).map((l) => (
+            {(['en', 'ko'] as const).map((l) => (
               <button
                 key={l}
                 className={`${styles.langBtn} ${lang === l ? styles.langBtnActive : ''}`}

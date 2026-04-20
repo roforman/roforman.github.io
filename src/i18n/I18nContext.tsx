@@ -12,7 +12,7 @@ interface I18nContextType {
 const I18nContext = createContext<I18nContextType | null>(null)
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>('ko')
+  const [lang, setLangState] = useState<Lang>('en')
 
   useEffect(() => {
     try {
