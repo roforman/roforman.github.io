@@ -26,7 +26,6 @@ export default function HomePage() {
           <p dangerouslySetInnerHTML={{ __html: t('home.heroBody') }} />
         </div>
         <div className={styles.heroQuickLinks}>
-          <Link href="/product/">{t('home.quickProducts')}</Link>
           <Link href="/company/#technology">{t('home.quickTechnology')}</Link>
           <Link href="/contact/">{t('home.quickContact')}</Link>
         </div>
